@@ -948,3 +948,64 @@ Runtime Error
 [0m18:00:59.453199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce11f03550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1836e820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce1830f6d0>]}
 [0m18:00:59.454761 [debug] [MainThread]: Flushing usage events
 [0m18:01:04.868913 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m19:53:07.186818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9ecc880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cacc1d340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cacaf3490>]}
+
+
+============================== 19:53:07.192999 | dcbb5dcb-0986-452b-b721-bb908344995f ==============================
+[0m19:53:07.192999 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:53:07.194074 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'empty': 'None', 'profiles_dir': '/Users/aroessner/.dbt', 'target_path': 'None', 'printer_width': '80', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'quiet': 'False', 'introspect': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'log_format': 'default'}
+[0m19:53:07.265619 [info ] [MainThread]: dbt version: 1.8.3
+[0m19:53:07.266204 [info ] [MainThread]: python version: 3.8.5
+[0m19:53:07.266725 [info ] [MainThread]: python path: /Users/aroessner/opt/anaconda3/bin/python
+[0m19:53:07.267226 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m19:53:17.737856 [info ] [MainThread]: Using profiles dir at /Users/aroessner/.dbt
+[0m19:53:17.738444 [info ] [MainThread]: Using profiles.yml file at /Users/aroessner/.dbt/profiles.yml
+[0m19:53:17.739095 [info ] [MainThread]: Using dbt_project.yml file at /Users/aroessner/Documents/git/smp_pipeline/dbt_project.yml
+[0m19:53:17.740974 [info ] [MainThread]: adapter type: snowflake
+[0m19:53:17.741608 [info ] [MainThread]: adapter version: 1.8.3
+[0m19:53:17.843956 [info ] [MainThread]: Configuration:
+[0m19:53:17.844588 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:53:17.845208 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:53:17.845601 [info ] [MainThread]: Required dependencies:
+[0m19:53:17.846217 [debug] [MainThread]: Executing "git --help"
+[0m19:53:17.867055 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:53:17.869010 [debug] [MainThread]: STDERR: "b''"
+[0m19:53:17.869732 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:53:17.870286 [info ] [MainThread]: Connection:
+[0m19:53:17.870945 [info ] [MainThread]:   account: ggdugby-ad77867
+[0m19:53:17.871357 [info ] [MainThread]:   user: LeroyJacob1989
+[0m19:53:17.871863 [info ] [MainThread]:   database: SUMUP_DB
+[0m19:53:17.872861 [info ] [MainThread]:   warehouse: SUMUP_WH
+[0m19:53:17.873623 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:53:17.874130 [info ] [MainThread]:   schema: S1_INPUT
+[0m19:53:17.874482 [info ] [MainThread]:   authenticator: None
+[0m19:53:17.874908 [info ] [MainThread]:   oauth_client_id: None
+[0m19:53:17.875381 [info ] [MainThread]:   query_tag: None
+[0m19:53:17.875731 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:53:17.876071 [info ] [MainThread]:   host: None
+[0m19:53:17.876377 [info ] [MainThread]:   port: None
+[0m19:53:17.876672 [info ] [MainThread]:   proxy_host: None
+[0m19:53:17.876966 [info ] [MainThread]:   proxy_port: None
+[0m19:53:17.877259 [info ] [MainThread]:   protocol: None
+[0m19:53:17.877549 [info ] [MainThread]:   connect_retries: 1
+[0m19:53:17.877842 [info ] [MainThread]:   connect_timeout: None
+[0m19:53:17.878132 [info ] [MainThread]:   retry_on_database_errors: False
+[0m19:53:17.878423 [info ] [MainThread]:   retry_all: False
+[0m19:53:17.878713 [info ] [MainThread]:   insecure_mode: False
+[0m19:53:17.879002 [info ] [MainThread]:   reuse_connections: None
+[0m19:53:17.880102 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:53:17.895797 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:53:17.898785 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:53:17.899271 [debug] [MainThread]: On debug: select 1 as id
+[0m19:53:17.899661 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:53:18.547396 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.648 seconds
+[0m19:53:18.549621 [debug] [MainThread]: On debug: Close
+[0m19:53:18.774831 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:53:18.775695 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:53:18.785535 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 11.68545, "process_user_time": 2.086821, "process_kernel_time": 0.655596, "process_mem_max_rss": "157675520", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:53:18.786583 [debug] [MainThread]: Command `dbt debug` succeeded at 19:53:18.786341 after 11.69 seconds
+[0m19:53:18.787698 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:53:18.788728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9ecc880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9caf653cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9caf675550>]}
+[0m19:53:18.789744 [debug] [MainThread]: Flushing usage events
