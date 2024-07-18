@@ -1009,3 +1009,656 @@ Runtime Error
 [0m19:53:18.787698 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m19:53:18.788728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9ecc880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9caf653cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9caf675550>]}
 [0m19:53:18.789744 [debug] [MainThread]: Flushing usage events
+[0m19:56:57.639565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990c705580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990eb25820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990eb4e880>]}
+
+
+============================== 19:56:57.643442 | de9c7bca-ba9e-49e7-9543-6ba14030d797 ==============================
+[0m19:56:57.643442 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:56:57.644353 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'static_parser': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'no_print': 'None', 'introspect': 'True', 'partial_parse': 'True', 'quiet': 'False', 'fail_fast': 'False', 'target_path': 'None', 'invocation_command': 'dbt run', 'profiles_dir': '/Users/aroessner/.dbt', 'version_check': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'use_colors': 'True', 'write_json': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'printer_width': '80'}
+[0m19:56:58.518272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de9c7bca-ba9e-49e7-9543-6ba14030d797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990cf0ca30>]}
+[0m19:56:58.568791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de9c7bca-ba9e-49e7-9543-6ba14030d797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991139cd60>]}
+[0m19:56:58.569651 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:56:58.598414 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:56:58.782101 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:56:58.782608 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:56:58.788067 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.smp_pipeline.example
+[0m19:56:58.824166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de9c7bca-ba9e-49e7-9543-6ba14030d797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9911974970>]}
+[0m19:56:58.939007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de9c7bca-ba9e-49e7-9543-6ba14030d797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99119c39d0>]}
+[0m19:56:58.939658 [info ] [MainThread]: Found 3 models, 4 sources, 560 macros
+[0m19:56:58.940132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de9c7bca-ba9e-49e7-9543-6ba14030d797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99118a2cd0>]}
+[0m19:56:58.942222 [info ] [MainThread]: 
+[0m19:56:58.943049 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:56:58.948025 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m19:56:58.964768 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m19:56:58.965469 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m19:56:58.966161 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:56:59.519953 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c174-0001-29c2-0001-fd0e00010756
+[0m19:56:59.522035 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m19:56:59.523737 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m19:56:59.524610 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m19:56:59.525445 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m19:56:59.645157 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:56:59.646154 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m19:56:59.646909 [info ] [MainThread]: 
+[0m19:56:59.647724 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[0m19:56:59.648687 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m19:56:59.650857 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.066754, "process_user_time": 2.267787, "process_kernel_time": 0.376245, "process_mem_max_rss": "164675584", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:56:59.651997 [debug] [MainThread]: Command `dbt run` failed at 19:56:59.651747 after 2.07 seconds
+[0m19:56:59.652726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f990c705580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99119c3fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9911a1c3a0>]}
+[0m19:56:59.653587 [debug] [MainThread]: Flushing usage events
+[0m19:58:01.169704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd235cf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd26401520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd263ec550>]}
+
+
+============================== 19:58:01.173096 | 002d8751-f084-48da-989a-3441d0a28382 ==============================
+[0m19:58:01.173096 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:58:01.173996 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'empty': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'version_check': 'True', 'target_path': 'None', 'debug': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'no_print': 'None', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'introspect': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'partial_parse': 'True'}
+[0m19:58:01.847825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '002d8751-f084-48da-989a-3441d0a28382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd283d4070>]}
+[0m19:58:01.908214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '002d8751-f084-48da-989a-3441d0a28382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd28418b50>]}
+[0m19:58:01.909104 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:58:01.936505 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:58:02.069531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:58:02.070352 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform.yml
+[0m19:58:02.300100 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.smp_pipeline.ii_transform_financials' (models/ii_transform/ii_transform_financials.sql) depends on a source named 's1_input.RAW_FINANCIALS' which was not found
+[0m19:58:02.302269 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.1856519, "process_user_time": 2.136085, "process_kernel_time": 0.28729, "process_mem_max_rss": "162639872", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:58:02.303156 [debug] [MainThread]: Command `dbt run` failed at 19:58:02.302978 after 1.19 seconds
+[0m19:58:02.303704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd235cf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd28ac3460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd23feb5b0>]}
+[0m19:58:02.304261 [debug] [MainThread]: Flushing usage events
+[0m20:00:41.940781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef1cd1520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef4401580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef43ec550>]}
+
+
+============================== 20:00:41.944297 | 8f52f11b-0f2d-4c87-9bdb-315187bf64ff ==============================
+[0m20:00:41.944297 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:00:41.945257 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'warn_error': 'None', 'empty': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_format': 'default', 'fail_fast': 'False', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True', 'write_json': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'target_path': 'None', 'profiles_dir': '/Users/aroessner/.dbt', 'partial_parse': 'True', 'log_cache_events': 'False', 'use_colors': 'True'}
+[0m20:00:42.622139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f52f11b-0f2d-4c87-9bdb-315187bf64ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef24cd9a0>]}
+[0m20:00:42.682532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f52f11b-0f2d-4c87-9bdb-315187bf64ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef4440520>]}
+[0m20:00:42.683438 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:00:42.711524 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:00:42.842821 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 2 files changed.
+[0m20:00:42.843651 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_store.sql
+[0m20:00:42.844025 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_sales.sql
+[0m20:00:42.844330 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_funnel.sql
+[0m20:00:42.844777 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform.yml
+[0m20:00:42.845089 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform_financials.sql
+[0m20:00:43.080796 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.smp_pipeline.ii_transform_financials' (models/ii_transform/ii_transform_financials.sql) depends on a source named 's1_input.RAW_FINANCIALS' which was not found
+[0m20:00:43.082856 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.1947198, "process_user_time": 2.128235, "process_kernel_time": 0.285509, "process_mem_max_rss": "162054144", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:00:43.083506 [debug] [MainThread]: Command `dbt run` failed at 20:00:43.083366 after 1.20 seconds
+[0m20:00:43.083955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef1cd1520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef6501370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcef7b57d60>]}
+[0m20:00:43.084355 [debug] [MainThread]: Flushing usage events
+[0m20:01:41.884788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea15cd520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea3c20f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea3bea550>]}
+
+
+============================== 20:01:41.888132 | 9d39a06a-ff18-426b-8689-25b7775295e2 ==============================
+[0m20:01:41.888132 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:01:41.889095 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'version_check': 'True', 'quiet': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'empty': 'False', 'fail_fast': 'False', 'no_print': 'None', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'partial_parse': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'warn_error': 'None', 'static_parser': 'True'}
+[0m20:01:42.556949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d39a06a-ff18-426b-8689-25b7775295e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea6c02760>]}
+[0m20:01:42.613891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d39a06a-ff18-426b-8689-25b7775295e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea6c2bc70>]}
+[0m20:01:42.614903 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:01:42.643456 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:01:42.777690 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 2 files changed.
+[0m20:01:42.778397 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_store.sql
+[0m20:01:42.778765 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_sales.sql
+[0m20:01:42.779080 [debug] [MainThread]: Partial parsing: added file: smp_pipeline://models/ii_transform/ii_transform_funnel.sql
+[0m20:01:42.779553 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform.yml
+[0m20:01:42.779971 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform_financials.sql
+[0m20:01:43.056525 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.smp_pipeline.example
+[0m20:01:43.070106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d39a06a-ff18-426b-8689-25b7775295e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea73b8370>]}
+[0m20:01:43.176705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d39a06a-ff18-426b-8689-25b7775295e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea765d580>]}
+[0m20:01:43.177362 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:01:43.177856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d39a06a-ff18-426b-8689-25b7775295e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea7424460>]}
+[0m20:01:43.179456 [info ] [MainThread]: 
+[0m20:01:43.180210 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:01:43.185577 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:01:43.202885 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:01:43.203378 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:01:43.203742 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:01:43.921654 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c179-0001-29c2-0001-fd0e0001075a
+[0m20:01:43.922831 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:01:43.924663 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:01:43.925769 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:01:43.926797 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:01:44.042332 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:01:44.043506 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:01:44.044533 [info ] [MainThread]: 
+[0m20:01:44.045493 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.86 seconds (0.86s).
+[0m20:01:44.046627 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:01:44.049274 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.2154574, "process_user_time": 2.415529, "process_kernel_time": 0.310069, "process_mem_max_rss": "171909120", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:01:44.050747 [debug] [MainThread]: Command `dbt run` failed at 20:01:44.050492 after 2.22 seconds
+[0m20:01:44.051577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea15cd520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea74243d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbea76b9e50>]}
+[0m20:01:44.052979 [debug] [MainThread]: Flushing usage events
+[0m20:01:49.473484 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m20:05:19.195838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f909f5cc790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a2425ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a2454610>]}
+
+
+============================== 20:05:19.199341 | 2408946a-58ce-4526-9108-c1d111059975 ==============================
+[0m20:05:19.199341 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:05:19.200362 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'static_parser': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'introspect': 'True', 'log_format': 'default', 'debug': 'False', 'quiet': 'False', 'write_json': 'True', 'no_print': 'None', 'fail_fast': 'False', 'partial_parse': 'True'}
+[0m20:05:19.894304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2408946a-58ce-4526-9108-c1d111059975', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a244d190>]}
+[0m20:05:19.954884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2408946a-58ce-4526-9108-c1d111059975', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a4bf9550>]}
+[0m20:05:19.955836 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:05:19.983711 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:05:20.124981 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:05:20.125788 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform.yml
+[0m20:05:20.298018 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.smp_pipeline.example
+[0m20:05:20.313457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2408946a-58ce-4526-9108-c1d111059975', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a52aee50>]}
+[0m20:05:20.418796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2408946a-58ce-4526-9108-c1d111059975', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a524ac40>]}
+[0m20:05:20.419402 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:05:20.419853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2408946a-58ce-4526-9108-c1d111059975', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a52aeee0>]}
+[0m20:05:20.421403 [info ] [MainThread]: 
+[0m20:05:20.422202 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:05:20.427549 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:05:20.443352 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:05:20.443910 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:05:20.444285 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:05:20.983622 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c17d-0001-2997-0000-0001fd0e7f85
+[0m20:05:20.984752 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:05:20.985923 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:05:20.986779 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:05:20.987953 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:05:21.080145 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:05:21.081119 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:05:21.081951 [info ] [MainThread]: 
+[0m20:05:21.082985 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.66 seconds (0.66s).
+[0m20:05:21.084339 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:05:21.086822 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.942891, "process_user_time": 2.364131, "process_kernel_time": 0.31904, "process_mem_max_rss": "167407616", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:05:21.088098 [debug] [MainThread]: Command `dbt run` failed at 20:05:21.087835 after 1.94 seconds
+[0m20:05:21.089026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f909f5cc790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a524a760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90a52790a0>]}
+[0m20:05:21.090076 [debug] [MainThread]: Flushing usage events
+[0m20:10:21.831367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc478e11730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc47bc014f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc47bc22c10>]}
+
+
+============================== 20:10:21.835186 | bedb1021-80b7-4df1-8970-873925d030ff ==============================
+[0m20:10:21.835186 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:10:21.836059 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'invocation_command': 'dbt debug --config-dir', 'partial_parse': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'introspect': 'True', 'target_path': 'None', 'printer_width': '80', 'fail_fast': 'False', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'log_cache_events': 'False', 'empty': 'None', 'debug': 'False', 'version_check': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'warn_error': 'None'}
+[0m20:10:21.895298 [info ] [MainThread]: To view your profiles.yml file, run:
+
+open /Users/aroessner/.dbt
+[0m20:10:21.896671 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.11649629, "process_user_time": 1.20669, "process_kernel_time": 0.149238, "process_mem_max_rss": "95879168", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:10:21.897303 [debug] [MainThread]: Command `dbt debug` succeeded at 20:10:21.897179 after 0.12 seconds
+[0m20:10:21.897707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc478e11730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc47ac25400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc47bcf9f70>]}
+[0m20:10:21.898098 [debug] [MainThread]: Flushing usage events
+[0m20:11:45.005697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd5546d2790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd5574266a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd555169d60>]}
+
+
+============================== 20:11:45.009783 | 9ef66de4-b957-45c6-9ad3-f6a5aac7ed13 ==============================
+[0m20:11:45.009783 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:11:45.010811 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'warn_error': 'None', 'version_check': 'True', 'introspect': 'True', 'profiles_dir': '/Users/aroessner/.dbt', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'debug': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'static_parser': 'True', 'partial_parse': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m20:11:45.691726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd559bc5a60>]}
+[0m20:11:45.750662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd559c31a90>]}
+[0m20:11:45.751648 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:11:45.781038 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:11:45.884315 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:11:45.885163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd556534be0>]}
+[0m20:11:47.171422 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.smp_pipeline.example
+[0m20:11:47.258768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd55a2c70d0>]}
+[0m20:11:47.351215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd559c95a30>]}
+[0m20:11:47.351777 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:11:47.352302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9ef66de4-b957-45c6-9ad3-f6a5aac7ed13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd559bfc3a0>]}
+[0m20:11:47.353766 [info ] [MainThread]: 
+[0m20:11:47.354485 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:11:47.359769 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWFLAKE_SAMPLE_DATA'
+[0m20:11:47.378252 [debug] [ThreadPool]: Using snowflake connection "list_SNOWFLAKE_SAMPLE_DATA"
+[0m20:11:47.378734 [debug] [ThreadPool]: On list_SNOWFLAKE_SAMPLE_DATA: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SNOWFLAKE_SAMPLE_DATA"} */
+show terse schemas in database SNOWFLAKE_SAMPLE_DATA
+    limit 10000
+[0m20:11:47.379085 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:11:48.395543 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.016 seconds
+[0m20:11:48.400364 [debug] [ThreadPool]: On list_SNOWFLAKE_SAMPLE_DATA: Close
+[0m20:11:48.541426 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_SNOWFLAKE_SAMPLE_DATA, now create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT)
+[0m20:11:48.542284 [debug] [ThreadPool]: Creating schema "database: "SNOWFLAKE_SAMPLE_DATA"
+schema: "S1_INPUT"
+"
+[0m20:11:48.548425 [debug] [ThreadPool]: Using snowflake connection "create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT"
+[0m20:11:48.548878 [debug] [ThreadPool]: On create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT"} */
+create schema if not exists SNOWFLAKE_SAMPLE_DATA.S1_INPUT
+[0m20:11:48.549216 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:11:49.056155 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c183-0001-2a0d-0000-0001fd0ed7b9
+[0m20:11:49.057500 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 003540 (42501): SQL execution error: Creating schema on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed.
+[0m20:11:49.058871 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro create_schema
+[0m20:11:49.059929 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:11:49.060858 [debug] [ThreadPool]: On create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT: Close
+[0m20:11:49.236307 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:11:49.237480 [debug] [MainThread]: Connection 'create_SNOWFLAKE_SAMPLE_DATA_S1_INPUT' was properly closed.
+[0m20:11:49.238434 [info ] [MainThread]: 
+[0m20:11:49.239344 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.88 seconds (1.88s).
+[0m20:11:49.240497 [error] [MainThread]: Encountered an error:
+Database Error
+  003540 (42501): SQL execution error: Creating schema on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed.
+[0m20:11:49.243087 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 4.2888, "process_user_time": 3.537248, "process_kernel_time": 0.325383, "process_mem_max_rss": "169500672", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:11:49.244442 [debug] [MainThread]: Command `dbt run` failed at 20:11:49.244205 after 4.29 seconds
+[0m20:11:49.245222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd5546d2790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd559c955e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd55a63a940>]}
+[0m20:11:49.246272 [debug] [MainThread]: Flushing usage events
+[0m20:15:22.945000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89d5d08b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89faeb910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89fb54400>]}
+
+
+============================== 20:15:22.948354 | e5a87b4a-c466-49d4-931b-ff5d88a6cec2 ==============================
+[0m20:15:22.948354 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:15:22.949342 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'version_check': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'target_path': 'None', 'invocation_command': 'dbt run', 'introspect': 'True', 'quiet': 'False', 'printer_width': '80', 'static_parser': 'True', 'warn_error': 'None', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'no_print': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'debug': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager'}
+[0m20:15:23.621516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a2c150a0>]}
+[0m20:15:23.680921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a2cafc10>]}
+[0m20:15:23.681880 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:15:23.708990 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:15:23.813697 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:15:23.814471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89ec37c10>]}
+[0m20:15:25.142799 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.smp_pipeline.example
+[0m20:15:25.229908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a32902b0>]}
+[0m20:15:25.324198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a2d236d0>]}
+[0m20:15:25.324765 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:15:25.325218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5a87b4a-c466-49d4-931b-ff5d88a6cec2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89faeba00>]}
+[0m20:15:25.326691 [info ] [MainThread]: 
+[0m20:15:25.327370 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:15:25.332278 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:15:25.349865 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:15:25.350321 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:15:25.350659 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:15:25.946297 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c187-0001-2a0d-0000-0001fd0ed7bd
+[0m20:15:25.947393 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:15:25.948758 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:15:25.949923 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:15:25.950967 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:15:26.205448 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:15:26.206611 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:15:26.207640 [info ] [MainThread]: 
+[0m20:15:26.208598 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.88 seconds (0.88s).
+[0m20:15:26.209708 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:15:26.212261 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.3195055, "process_user_time": 3.498843, "process_kernel_time": 0.320503, "process_mem_max_rss": "169406464", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:15:26.213675 [debug] [MainThread]: Command `dbt run` failed at 20:15:26.213397 after 3.32 seconds
+[0m20:15:26.214495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa89d5d08b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a2d42a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa8a2eac220>]}
+[0m20:15:26.215780 [debug] [MainThread]: Flushing usage events
+[0m20:29:24.274427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95bbdcf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95bec2c7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95bec8bd90>]}
+
+
+============================== 20:29:24.280038 | fa8f785f-2417-440a-a9e7-8878480af3ea ==============================
+[0m20:29:24.280038 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:29:24.280985 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'invocation_command': 'dbt run', 'empty': 'False', 'printer_width': '80', 'use_colors': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'partial_parse': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'cache_selected_only': 'False', 'introspect': 'True', 'no_print': 'None', 'write_json': 'True', 'debug': 'False'}
+[0m20:29:25.557989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0c149a0>]}
+[0m20:29:25.605626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0ca4f70>]}
+[0m20:29:25.606939 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:29:25.635903 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:29:25.741971 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m20:29:25.742819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95bd528700>]}
+[0m20:29:27.229871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0f1c940>]}
+[0m20:29:27.336537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0c3aa60>]}
+[0m20:29:27.337109 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:29:27.337582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fa8f785f-2417-440a-a9e7-8878480af3ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0cf50a0>]}
+[0m20:29:27.338954 [info ] [MainThread]: 
+[0m20:29:27.339665 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:29:27.344946 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:29:27.362638 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:29:27.363160 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:29:27.363523 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:29:28.062139 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c195-0001-2997-0000-0001fd0e7f91
+[0m20:29:28.063452 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:29:28.064402 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:29:28.065018 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:29:28.065727 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:29:28.193536 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:29:28.194732 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:29:28.195765 [info ] [MainThread]: 
+[0m20:29:28.196680 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.86 seconds (0.86s).
+[0m20:29:28.197783 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:29:28.202345 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.986568, "process_user_time": 3.729283, "process_kernel_time": 0.533642, "process_mem_max_rss": "169074688", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:29:28.204309 [debug] [MainThread]: Command `dbt run` failed at 20:29:28.203913 after 3.99 seconds
+[0m20:29:28.205491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95bbdcf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0d232b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95c0c14b80>]}
+[0m20:29:28.206313 [debug] [MainThread]: Flushing usage events
+[0m20:32:37.035115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da65cf7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da94746d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da948d0a0>]}
+
+
+============================== 20:32:37.040022 | f8bf5ce2-2425-4993-827f-65836575e569 ==============================
+[0m20:32:37.040022 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:32:37.040940 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'use_colors': 'True', 'version_check': 'True', 'debug': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'empty': 'False', 'no_print': 'None', 'target_path': 'None', 'write_json': 'True', 'profiles_dir': '/Users/aroessner/.dbt', 'static_parser': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'partial_parse': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'quiet': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager'}
+[0m20:32:38.205044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8bf5ce2-2425-4993-827f-65836575e569', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da6dc6b80>]}
+[0m20:32:38.252101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8bf5ce2-2425-4993-827f-65836575e569', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da9474520>]}
+[0m20:32:38.253710 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:32:38.282551 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:32:38.503367 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:32:38.504120 [debug] [MainThread]: Partial parsing: updated file: smp_pipeline://models/ii_transform/ii_transform.yml
+[0m20:32:38.669656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8bf5ce2-2425-4993-827f-65836575e569', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dac32ee20>]}
+[0m20:32:38.774502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8bf5ce2-2425-4993-827f-65836575e569', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dac36bc70>]}
+[0m20:32:38.775129 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:32:38.775601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8bf5ce2-2425-4993-827f-65836575e569', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dac32eeb0>]}
+[0m20:32:38.777071 [info ] [MainThread]: 
+[0m20:32:38.777931 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:32:38.784685 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:32:38.799666 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:32:38.800308 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:32:38.800722 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:32:39.644577 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c198-0001-2a0d-0000-0001fd0ed7c5
+[0m20:32:39.645682 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:32:39.646779 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:32:39.647605 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:32:39.648484 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:32:39.813575 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:32:39.814553 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:32:39.815380 [info ] [MainThread]: 
+[0m20:32:39.816339 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.04 seconds (1.04s).
+[0m20:32:39.817622 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:32:39.821059 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.8412197, "process_user_time": 2.508463, "process_kernel_time": 0.485086, "process_mem_max_rss": "167550976", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:32:39.822528 [debug] [MainThread]: Command `dbt run` failed at 20:32:39.822168 after 2.84 seconds
+[0m20:32:39.823763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9da65cf7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dac36b7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dac344040>]}
+[0m20:32:39.824849 [debug] [MainThread]: Flushing usage events
+[0m20:33:55.607902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb207dc85e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20ac22fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20ac45a60>]}
+
+
+============================== 20:33:55.611246 | 2a4c7da5-f5ca-4917-8855-a95c37476b22 ==============================
+[0m20:33:55.611246 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:33:55.612154 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'target_path': 'None', 'empty': 'False', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'no_print': 'None', 'warn_error': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'use_colors': 'True', 'write_json': 'True', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'profiles_dir': '/Users/aroessner/.dbt', 'fail_fast': 'False', 'partial_parse': 'True', 'version_check': 'True', 'log_cache_events': 'False'}
+[0m20:33:56.292024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20870ca60>]}
+[0m20:33:56.352658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20cc479d0>]}
+[0m20:33:56.353548 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:33:56.382602 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:33:56.525408 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:33:56.526328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb209d2b5e0>]}
+[0m20:33:57.903967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20cf78cd0>]}
+[0m20:33:57.994851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20cbf9880>]}
+[0m20:33:57.995401 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:33:57.995848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a4c7da5-f5ca-4917-8855-a95c37476b22', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20ac40070>]}
+[0m20:33:57.997308 [info ] [MainThread]: 
+[0m20:33:57.998105 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:33:58.003029 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:33:58.016737 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:33:58.017246 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:33:58.017591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:33:58.465960 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:33:58.467051 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:33:58.468035 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:33:58.468885 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:33:58.469846 [debug] [ThreadPool]: On list_SUMUP_DB: No close available on handle
+[0m20:33:58.471350 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:33:58.472024 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:33:58.472695 [info ] [MainThread]: 
+[0m20:33:58.473443 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.47 seconds (0.47s).
+[0m20:33:58.474442 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    250001 (08001): Failed to connect to DB: ggdugby-ad77867.snowflakecomputing.com:443. Role 'SUMUP_ROLE' specified in the connect string does not exist or not authorized. Contact your local system administrator, or attempt to login with another role, e.g. PUBLIC.
+[0m20:33:58.476580 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.9221556, "process_user_time": 3.4351, "process_kernel_time": 0.32062, "process_mem_max_rss": "169345024", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:33:58.477597 [debug] [MainThread]: Command `dbt run` failed at 20:33:58.477399 after 2.92 seconds
+[0m20:33:58.478255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb207dc85e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb203c000d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb20cbf9fa0>]}
+[0m20:33:58.478916 [debug] [MainThread]: Flushing usage events
+[0m20:37:13.868676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94655d0850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9467b25100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9467b30220>]}
+
+
+============================== 20:37:13.872343 | 48b529a3-e89e-4314-a704-5a0e05a2996f ==============================
+[0m20:37:13.872343 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:37:13.873294 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'version_check': 'True', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'use_colors': 'True', 'log_format': 'default', 'static_parser': 'True', 'no_print': 'None', 'printer_width': '80', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'partial_parse': 'True', 'debug': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'invocation_command': 'dbt run'}
+[0m20:37:14.542306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9465f0ac10>]}
+[0m20:37:14.600297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9467b254f0>]}
+[0m20:37:14.601377 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:37:14.630587 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:37:14.733706 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m20:37:14.734555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9466c35ca0>]}
+[0m20:37:16.101591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a953700>]}
+[0m20:37:16.189950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a441430>]}
+[0m20:37:16.190505 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:37:16.190946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48b529a3-e89e-4314-a704-5a0e05a2996f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a2e82b0>]}
+[0m20:37:16.192422 [info ] [MainThread]: 
+[0m20:37:16.193121 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:37:16.197814 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:37:16.214096 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:37:16.214783 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:37:16.215318 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:37:16.978053 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c19d-0001-2a0d-0000-0001fd0ed7c9
+[0m20:37:16.979180 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:37:16.980391 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:37:16.981244 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:37:16.982302 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:37:17.120546 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:37:17.121718 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:37:17.122745 [info ] [MainThread]: 
+[0m20:37:17.123717 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.93 seconds (0.93s).
+[0m20:37:17.124826 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:37:17.127508 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.312325, "process_user_time": 3.439835, "process_kernel_time": 0.31901, "process_mem_max_rss": "169156608", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:37:17.129827 [debug] [MainThread]: Command `dbt run` failed at 20:37:17.129274 after 3.31 seconds
+[0m20:37:17.131025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94655d0850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9469c763a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a2ead00>]}
+[0m20:37:17.132256 [debug] [MainThread]: Flushing usage events
+[0m20:51:56.545554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc56bf0f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc56ed66ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc56ed96610>]}
+
+
+============================== 20:51:56.555426 | c72c2055-37c1-4b26-b2a0-fcc3b7404c1f ==============================
+[0m20:51:56.555426 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:51:56.557138 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'target_path': 'None', 'introspect': 'True', 'version_check': 'True', 'printer_width': '80', 'empty': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'write_json': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'debug': 'False'}
+[0m20:51:57.804500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c72c2055-37c1-4b26-b2a0-fcc3b7404c1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc56c705bb0>]}
+[0m20:51:57.858454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c72c2055-37c1-4b26-b2a0-fcc3b7404c1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc571488610>]}
+[0m20:51:57.860530 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m20:51:57.894015 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:51:58.110003 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:51:58.110510 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:51:58.144538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c72c2055-37c1-4b26-b2a0-fcc3b7404c1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc571881f10>]}
+[0m20:51:58.253918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c72c2055-37c1-4b26-b2a0-fcc3b7404c1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc5718ce280>]}
+[0m20:51:58.254598 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m20:51:58.255070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c72c2055-37c1-4b26-b2a0-fcc3b7404c1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc5717a1c10>]}
+[0m20:51:58.256718 [info ] [MainThread]: 
+[0m20:51:58.257599 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:51:58.263200 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m20:51:58.282074 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m20:51:58.282580 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m20:51:58.282957 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:51:59.014537 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c1ab-0001-2a0d-0000-0001fd0ed7cd
+[0m20:51:59.015650 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:51:59.016786 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m20:51:59.017470 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:51:59.018323 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m20:51:59.142368 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:51:59.143560 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m20:51:59.144602 [info ] [MainThread]: 
+[0m20:51:59.145673 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m20:51:59.146999 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m20:51:59.152152 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.681506, "process_user_time": 2.47927, "process_kernel_time": 0.55316, "process_mem_max_rss": "164413440", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:51:59.153909 [debug] [MainThread]: Command `dbt run` failed at 20:51:59.153570 after 2.68 seconds
+[0m20:51:59.154962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc56bf0f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc5718ce760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc5718f44c0>]}
+[0m20:51:59.155939 [debug] [MainThread]: Flushing usage events
+[0m21:43:02.777932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc882dd3580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc885c62820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc885c85880>]}
+
+
+============================== 21:43:02.783203 | 154bf900-21df-4ddc-9f73-ef06e3e77f6a ==============================
+[0m21:43:02.783203 [info ] [MainThread]: Running with dbt=1.8.3
+[0m21:43:02.784348 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'printer_width': '80', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'fail_fast': 'False', 'log_format': 'default', 'write_json': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'debug': 'False', 'quiet': 'False', 'profiles_dir': '/Users/aroessner/.dbt'}
+[0m21:43:04.026346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '154bf900-21df-4ddc-9f73-ef06e3e77f6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc883707a30>]}
+[0m21:43:04.074274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '154bf900-21df-4ddc-9f73-ef06e3e77f6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc88556c490>]}
+[0m21:43:04.075933 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m21:43:04.107220 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m21:43:04.326563 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:43:04.327012 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:43:04.361168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '154bf900-21df-4ddc-9f73-ef06e3e77f6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8880bfcd0>]}
+[0m21:43:04.469410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '154bf900-21df-4ddc-9f73-ef06e3e77f6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc888108e50>]}
+[0m21:43:04.470089 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m21:43:04.470588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '154bf900-21df-4ddc-9f73-ef06e3e77f6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc8880ceeb0>]}
+[0m21:43:04.472203 [info ] [MainThread]: 
+[0m21:43:04.472964 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:43:04.478330 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m21:43:04.496832 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m21:43:04.497421 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m21:43:04.497808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:43:05.555892 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c1df-0001-2a07-0001-fd0e00016006
+[0m21:43:05.557002 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m21:43:05.558895 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m21:43:05.559841 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m21:43:05.560707 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m21:43:05.681984 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:43:05.682443 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m21:43:05.682822 [info ] [MainThread]: 
+[0m21:43:05.683298 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.21 seconds (1.21s).
+[0m21:43:05.684124 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m21:43:05.686214 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.9658263, "process_user_time": 2.379575, "process_kernel_time": 0.521659, "process_mem_max_rss": "164585472", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:43:05.686966 [debug] [MainThread]: Command `dbt run` failed at 21:43:05.686822 after 2.97 seconds
+[0m21:43:05.687491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc882dd3580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc888108f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc888143310>]}
+[0m21:43:05.687955 [debug] [MainThread]: Flushing usage events
+[0m21:47:15.171694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902b5c5550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902e42c7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902e48bd90>]}
+
+
+============================== 21:47:15.177538 | c30ca9f9-1dd3-483a-966a-c57ed28509dd ==============================
+[0m21:47:15.177538 [info ] [MainThread]: Running with dbt=1.8.3
+[0m21:47:15.178752 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'warn_error': 'None', 'log_format': 'default', 'version_check': 'True', 'empty': 'False', 'debug': 'False', 'introspect': 'True', 'profiles_dir': '/Users/aroessner/.dbt', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'indirect_selection': 'eager', 'no_print': 'None', 'printer_width': '80', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'partial_parse': 'True', 'invocation_command': 'dbt run'}
+[0m21:47:16.537802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90303179a0>]}
+[0m21:47:16.584551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90303a6f40>]}
+[0m21:47:16.586219 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m21:47:16.618706 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m21:47:16.719617 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m21:47:16.720475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902cd29700>]}
+[0m21:47:18.143578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9030a5aca0>]}
+[0m21:47:18.246765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902e480340>]}
+[0m21:47:18.247369 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m21:47:18.247836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c30ca9f9-1dd3-483a-966a-c57ed28509dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9030384310>]}
+[0m21:47:18.249378 [info ] [MainThread]: 
+[0m21:47:18.250069 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:47:18.255526 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m21:47:18.271564 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m21:47:18.272085 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m21:47:18.272605 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:47:18.917730 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c1e3-0001-2a26-0001-fd0e00017006
+[0m21:47:18.918604 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m21:47:18.919572 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m21:47:18.920210 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m21:47:18.921078 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m21:47:19.017306 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:47:19.018521 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m21:47:19.019412 [info ] [MainThread]: 
+[0m21:47:19.020891 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.77 seconds (0.77s).
+[0m21:47:19.022402 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m21:47:19.026990 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.916624, "process_user_time": 3.796075, "process_kernel_time": 0.547345, "process_mem_max_rss": "169172992", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:47:19.028679 [debug] [MainThread]: Command `dbt run` failed at 21:47:19.028365 after 3.92 seconds
+[0m21:47:19.029573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902b5c5550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902e480f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90306d8f40>]}
+[0m21:47:19.030374 [debug] [MainThread]: Flushing usage events
+[0m21:57:42.044205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e12ecf7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e15c406d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e15c4e0a0>]}
+
+
+============================== 21:57:42.047612 | 9349e99b-2bbd-4987-a9b2-c57bad099543 ==============================
+[0m21:57:42.047612 [info ] [MainThread]: Running with dbt=1.8.3
+[0m21:57:42.048573 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'warn_error': 'None', 'use_colors': 'True', 'log_format': 'default', 'write_json': 'True', 'invocation_command': 'dbt run', 'debug': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'empty': 'False', 'profiles_dir': '/Users/aroessner/.dbt', 'introspect': 'True', 'fail_fast': 'False', 'target_path': 'None', 'log_path': '/Users/aroessner/Documents/git/smp_pipeline/logs', 'version_check': 'True', 'static_parser': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'quiet': 'False', 'partial_parse': 'True'}
+[0m21:57:42.786158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e136c6b80>]}
+[0m21:57:42.844543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e15c40520>]}
+[0m21:57:42.845621 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m21:57:42.870310 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m21:57:42.974517 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m21:57:42.975301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e14d33c10>]}
+[0m21:57:44.350498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e1820f8b0>]}
+[0m21:57:44.441355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e17d47160>]}
+[0m21:57:44.441893 [info ] [MainThread]: Found 6 models, 1 source, 560 macros
+[0m21:57:44.442389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9349e99b-2bbd-4987-a9b2-c57bad099543', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e17bfd280>]}
+[0m21:57:44.443803 [info ] [MainThread]: 
+[0m21:57:44.444533 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:57:44.449316 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SUMUP_DB'
+[0m21:57:44.467293 [debug] [ThreadPool]: Using snowflake connection "list_SUMUP_DB"
+[0m21:57:44.467779 [debug] [ThreadPool]: On list_SUMUP_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "smp_pipeline", "target_name": "dev", "connection_name": "list_SUMUP_DB"} */
+show terse schemas in database SUMUP_DB
+    limit 10000
+[0m21:57:44.468144 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:57:45.070266 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b5c1ed-0001-2997-0000-0001fd0e7f95
+[0m21:57:45.071618 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m21:57:45.072910 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m21:57:45.073866 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m21:57:45.074890 [debug] [ThreadPool]: On list_SUMUP_DB: Close
+[0m21:57:45.193640 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:57:45.194603 [debug] [MainThread]: Connection 'list_SUMUP_DB' was properly closed.
+[0m21:57:45.195441 [info ] [MainThread]: 
+[0m21:57:45.196356 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.75 seconds (0.75s).
+[0m21:57:45.197479 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "SUMUP_DB"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m21:57:45.199937 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.2073452, "process_user_time": 3.583217, "process_kernel_time": 0.374852, "process_mem_max_rss": "169496576", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:57:45.201151 [debug] [MainThread]: Command `dbt run` failed at 21:57:45.200917 after 3.21 seconds
+[0m21:57:45.201954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e12ecf7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e17be7310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9e17d47910>]}
+[0m21:57:45.202944 [debug] [MainThread]: Flushing usage events

@@ -5,7 +5,7 @@ sources:
     database: SUMUP_DB
     schema: S1_INPUT
     tables: 
-      - name: RAW_FINANCIALS
-      - name: RAW_FUNNEL
+#      - name: RAW_FINANCIALS
+#      - name: RAW_FUNNEL
       - name: RAW_SALES
-      - name: RAW_STORE
+#      - name: RAW_STORE
