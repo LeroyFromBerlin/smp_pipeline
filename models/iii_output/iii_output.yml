@@ -1,18 +1,18 @@
 version: 2
 
 sources:
-  - name: S1_INPUT
+  - name: S2_TRANSFORMATION
     database: SUMUP_DB
-    schema: S1_INPUT
+    schema: S2_TRANSFORMATION
     tables: 
-      - name: RAW_FINANCIALS
+      - name: FINANCIALS
         description: contains LTV & CAC
 
-      - name: RAW_FUNNEL
+      - name: FUNNEL
         description: sales rep funnel data
 
-      - name: RAW_SALES
+      - name: SALES
         description: sales by customer
 
-      - name: RAW_STORE
+      - name: STORE
         description: channel info by customer

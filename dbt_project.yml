@@ -35,3 +35,6 @@ models:
     ii_transform:
       +materialized: table
       snowflake_warehouse: sumup_wh
+    iii_output:
+      +materialized: table
+      snowflake_warehouse: sumup_wh
