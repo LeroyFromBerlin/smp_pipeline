@@ -11,7 +11,7 @@
 
 4) initialize DBT and transform the data in such a way that the final output can be fetched in a 1- or 2-line query locally from Snowflake at a later stage. This happens in the two models ii_transform and iii_output
 
-> **_NOTE:_** I ran into a permission issue when running dbt with DBT struggling to access the Snowflake db. The models I created make sense to me and should work but I did not have the time to debug this and actually test them. Because of that I ran the queries locally in Snowflake to have something presentable.
+> **_NOTE:_** I ran into a permission issue when running DBT: with DBT struggling to access the Snowflake db. The models I created make sense to me conseptually and should work but I did not have the time to debug this and actually test them. Because of that I ran the queries locally in Snowflake to have something presentable.
 
 5) Answer the questions
 
